@@ -9,7 +9,7 @@
     <!-- jsPDF-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
     <!-- myJS-->
-    <script src="js/downloadPDF"></script>
+    <script src="js/downloadPDF.js"></script>
     <title>Interview Review Builder</title>
 </head>
 <body>
@@ -22,47 +22,70 @@
     </div>
     <h2>Interview Evaluations</h2>
 
-    <table style="width:90%; height:60%">
-        <tr>
-            <th> </th>
-            <th>General Abilities</th>
-            <th>Technical Abilities</th>
-            <th>Values</th>
-            <th>Overall Score</th>
-        </tr>
-        <tr>
-            <td>Team Leader</td>
-        </tr>
-        <tr>
-            <td>HR</td>
-        </tr>
-        <tr>
-            <td>CEO</td>
-        </tr>
-        
-    </table>
-        
-    <div class="container">
-        <div class="row">
-            <div class="col-md-9 no-float">
-                <h3>Image here</h3>
-                <p>Lorem ipsum dolor..</p>
-            </div>
-            <div class="col-md-3 no-float">
-                <h3>Column 2</h3>
-                <p>Lorem ipsum dolor..</p>
-            </div>
-        </div>
-    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
+    <div id="customers">
+        <table id="tab_customers" class="table table-striped">
+            <colgroup>
+                <col width="20%">
+                <col width="20%">
+                <col width="20%">
+                <col width="20%">
+            </colgroup>
+            <thead>
+                <tr class='warning'>
+                    <th>Candidate</th>
+                    <th>General Ability</th>
+                    <th>Professional Ability</th>
+                    <th>Values</th>
+                    <th>Overall Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John Doe</td>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>/</td>
+                </tr>
+                <tr>
+                    <td>Ken Yan</td>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>/</td>
+                </tr>
+                <tr>
+                    <td>Ken Yan</td>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>/</td>
+                </tr>
+                <tr>
+                    <td>Ken Yan</td>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>/</td>
+                </tr>
+                <tr>
+                    <td>Ken Yan</td>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>/</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     <!--downloadPDF-->
-    //<a href="javascript:demoFromHTML()" class="btn btn-secondary">
-    Print
+    <!--a href="javascript:demoFromHTML()" class="btn btn-secondary"-->
     <button onclick="myFunction()">Print this page</button>
 
     <script>
@@ -71,11 +94,8 @@
         }
     </script>
 
-    <div id="content">
-        <h1>
-            Ken doesnt know what to do. We support special element handlers. Register them with jQuery-style.
-        </h1>
-    </div>
+    <button onclick="javascript:demoFromHTML();">PDF</button>
+
     <!--
     <script>
         alert($('div').text()); // show message with div content
