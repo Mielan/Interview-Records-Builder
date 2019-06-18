@@ -21,7 +21,7 @@
         <p>Created by Mielan (& messed up by hirondelle) @ PMDT</p>
         <p>Interview Evaluations</p>
 
-        <div class="nav nav-pills" id="v-pills-tab" role="tablist" >
+        <div class="nav nav-pills" id="v-pills-tab" role="tablist">
             <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">General Ability</a>
             <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Vocational Ability</a>
             <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Values</a>
@@ -36,7 +36,13 @@
             <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
         </div>
     </div>
-    
+    <?php //Post Params
+    $CRM_1 = $_POST['CRM_1'];
+    $CRM_2 = $_POST['CRM_2'];
+    $CRM_3 = $_POST['CRM_3'];
+    $CRM_4 = $_POST['CRM_4'];
+
+    ?>
     <div class="row">
         <div class="container">
 
@@ -91,10 +97,23 @@
             </form>
         </div>
         <!-- Nav tabs -->
+        <!-- Nav tabs -->
+        <?php //Query
 
-    <!-- Nav tabs -->
-    
+        //INSERT
+        $query = " INSERT INTO table ( CRM_1, CRM_2, CRM_3, CRM_4 )  VALUES ( '$CRM_1', '$CRM_2', '$CRM_3', '$CRM_4' ) ";
+        $result = mysql_query($query);
 
+        if( $result )
+        {
+        echo 'Success';
+        }
+        else
+        {
+        echo 'Query Failed';
+        }
+
+        ?>
 
         <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
             <a class="nav-link" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">General Ability</a>
