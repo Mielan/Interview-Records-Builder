@@ -1,0 +1,8 @@
+﻿body
+{
+}
+.navbar-right {
+    height: 100vh;
+    right: 0;
+    position: absolute;
+}
